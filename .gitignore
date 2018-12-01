@@ -1,3 +1,9 @@
+#service-account
+service-account.json
+
+#hidden files
+.DS_Store
+
 # Logs
 logs
 *.log

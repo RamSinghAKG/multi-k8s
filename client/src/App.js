@@ -3,6 +3,8 @@ import logo from './logo.svg';
 import './App.css';
 import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
 import TestPage from './TestPage';
+import Reduce from './Reduce';
+import DragDrop from './DragDrop';
 import Fib from './Fib';
 
 class App extends Component {
@@ -11,15 +13,24 @@ class App extends Component {
       <Router>
         <div className="App">
           <header className="App-header">
-            <img src={logo} className="App-logo" alt="logo" />
-            <h1 className="App-title">Fib Calculator version 1</h1>
-            <Link to="/">Home</Link>
-            <Link to="/test">Test Page</Link>
+            <div className='logo'>
+                <img src={logo} className="App-logo" alt="logo" />
+                <h2 className="App-title">Fib Calculator version 3</h2>
+            </div>
+            
+            <div className="Links">
+              <Link to="/">Home</Link>
+              <Link to="/test">Test Page</Link>
+              <Link to='/reduce'>USe of Reduce()</Link>
+              <Link to='/drag'>Drag and Drop</Link>
+            </div>
+
           </header>
-        
           <div>
             <Route exact path="/" component={Fib}></Route>
             <Route exact path="/test" component={TestPage}></Route>
+            <Route exact path="/reduce" component={Reduce}></Route>
+            <Route exact path="/drag" component={DragDrop}></Route>
           </div>
         </div>
       </Router>
